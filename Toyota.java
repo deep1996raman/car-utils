@@ -8,7 +8,7 @@ Toyota(String name, int price)
 {
 	this.model = name; 
 	this.price = price;
-	resale_val = this.price*60/100;
+	resaleVal = this.price*60/100;
 }
 	
 	
