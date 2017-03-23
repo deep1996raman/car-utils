@@ -6,7 +6,7 @@ public class Maruti extends Cars{
 	{
 		this.model = name; 
 		this.price = price;
-		resale_val = this.price*60/100;
+		resaleVal = this.price*60/100;
 	}
 		
 	
