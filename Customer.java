@@ -17,8 +17,8 @@ public class Customer{
 	Scanner st = new Scanner(System.in);
 	BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 	int ch;
-	String car_name;
-	int car_price;
+	String carName;
+	int carPrice;
 	//int[] arr = new int[10];
 	static int i=0;
 	Customer() throws IOException
@@ -58,29 +58,29 @@ public class Customer{
 		case 1:
 			System.out.println("enter your car name");
 			
-			 car_name = br.readLine();
+			 carName = br.readLine();
 			
 			System.out.println("enter car price: ");
-			car_price = st.nextInt();
-			Toyota obj1 = new Toyota(car_name,car_price);
+			carPrice = st.nextInt();
+			Toyota obj1 = new Toyota(carName,carPrice);
 			cars.add(obj1);
 			break;
 			
 		case 2:
 			System.out.println("enter your car name");
-			 car_name = br.readLine();
+			 carName = br.readLine();
 			System.out.println("enter car price: ");
-			car_price = st.nextInt();
-			Maruti obj2 = new Maruti(car_name,car_price);
+			carPrice = st.nextInt();
+			Maruti obj2 = new Maruti(carName,carPrice);
 		cars.add(obj2);	
 		break;
 			
 		case 3:
 			System.out.println("enter your car name: ");
-			 car_name = br.readLine();
+			 carName = br.readLine();
 			System.out.println("enter car price: ");
-			car_price = st.nextInt();
-			Hyundai obj3 = new Hyundai(car_name,car_price);
+			carPrice = st.nextInt();
+			Hyundai obj3 = new Hyundai(carName,carPrice);
 			cars.add(obj3);
 			break;
 		
