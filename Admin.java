@@ -10,9 +10,9 @@ static int i=0;
 	
 	public static void main(String[] args) throws IOException{
 		// TODO Auto-generated method stub
-		Customer[] add_name = new Customer[10];
-		 ArrayList<Customer> customer_list = new ArrayList<Customer>();
-		 int store_id[]= new int[10];
+		Customer[] addName = new Customer[10];
+		 ArrayList<Customer> customerList = new ArrayList<Customer>();
+		 int storeId[]= new int[10];
 		// int random_id[] = new int[6];
 		 Scanner sc= new Scanner(System.in);
 		while(true)
@@ -38,21 +38,21 @@ static int i=0;
 			case ADD_CUSTOMER:
 				
 				//Customer[] add_name = new Customer[10];
-				add_name[i]= new Customer();
-				customer_list.add(add_name[i]);
+				addName[i]= new Customer();
+				customerList.add(addName[i]);
 				i++;
 				break;
 				
 			case ADD_CAR_TO_CUSTOMER:
 				System.out.println("enter  id of customer:");
 			
-				int pass_id = sc.nextInt();
-			for(Customer counter: customer_list)
+				int passId = sc.nextInt();
+			for(Customer counter: customerList)
 			{
-				if(counter.id==pass_id)
+				if(counter.id==passId)
 				{
-					int index = customer_list.indexOf(counter);// it returns the value of index;
-					add_name[index].buycars();
+					int index = customerList.indexOf(counter);// it returns the value of index;
+					addName[index].buycars();
 				}
 				
 			}
@@ -64,7 +64,7 @@ static int i=0;
 				//Customer list_disp = new Customer();
 				
 				
-				for(Customer counter: customer_list)
+				for(Customer counter: customerList)
 				{
 					
 					
@@ -78,7 +78,7 @@ static int i=0;
 						
 						System.out.println("price is: " + counter1.price);
 						
-						System.out.println("resale val is: " + counter1.resale_val);
+						System.out.println("resale val is: " + counter1.resaleVal);
 					}
 					
 				}
@@ -88,12 +88,12 @@ static int i=0;
 			case LIST_INDIVIDUAL:
 				//Customer list_id = new Customer();
 				System.out.println("enter id of customer");
-				int id_recog= sc.nextInt();
+				int idRecog= sc.nextInt();
 				
-				for(Customer counter: customer_list)
+				for(Customer counter: customerList)
 				{
 				
-					if(counter.id ==id_recog)
+					if(counter.id ==idRecog)
 					{
 						System.out.println("name of the customer is: " + counter.name);
 						System.out.println("id of customer is: " + counter.id);
@@ -107,9 +107,9 @@ static int i=0;
 			
 			case GENERATE_PRIZES:
 				int k=0;
-				for(Customer counter:customer_list)
+				for(Customer counter:customerList)
 				{
-					store_id[k] = counter.id;
+					storeId[k] = counter.id;
 					k++;
 				}
 				
@@ -119,17 +119,17 @@ static int i=0;
 				//	int[] random_id = pickNRandom(store_id, 6);
 				
 				
-				    List<Integer> list = new ArrayList<Integer>(store_id.length);
-				    for (int i : store_id)
+				    List<Integer> list = new ArrayList<Integer>(storeId.length);
+				    for (int i : storeId)
 				        list.add(i);
 				    Collections.shuffle(list);
 
-				    int[] random_id = new int[6];
+				    int[] randomId = new int[6];
 				    for (int i = 0; i < 6; i++)
 				    {
-				        random_id[i] = list.get(i);
+				        randomId[i] = list.get(i);
 				    }
-				        Arrays.sort(random_id);
+				        Arrays.sort(randomId);
 				
 				
 				System.out.println("enter 3 numbers: ");
@@ -137,13 +137,13 @@ static int i=0;
 				int num2 = sc.nextInt();
 				int num3 = sc.nextInt();
 				
-				for(int i=0;i<random_id.length;i++)
+				for(int i=0;i<randomId.length;i++)
 				{
 					
-					if(random_id[i]==num1 || random_id[i]==num1 || random_id[i]==num1)
+					if(randomId[i]==num1 || randomId[i]==num1 || randomId[i]==num1)
 					{
 					
-					System.out.println("winner is :" + random_id[i]);	
+					System.out.println("winner is :" + randomId[i]);	
 					break;
 					}
 					
@@ -170,7 +170,7 @@ static int i=0;
 	}
 
 
-	private static int[] pickNRandom(int[] store_id, int j) {
+	private static int[] pickNRandom(int[] storeId, int j) {
 		// TODO Auto-generated method stub
 		return null;
 	}
